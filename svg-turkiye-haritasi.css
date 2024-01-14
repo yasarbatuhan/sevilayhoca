@@ -1,0 +1,148 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1400px) and (min-height: 500px) {
+  #baslık {
+    font-family: segoe ui;
+    font-size: 22px;
+  }
+
+  .foto-animate {
+    animation: foto 1s 0.1s forwards;
+  }
+
+  @keyframes foto {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+
+  }
+
+  #resim {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 300px;
+    height: 250px;
+  }
+
+  #eser {
+    font-family: 'Times New Roman';
+    z-index: 15;
+    font-size: 18px;
+  }
+
+  #border {
+    z-index: 5;
+    cursor: pointer;
+    height: 100%;
+    width: 5px;
+    background-color: black;
+    float: right;
+  }
+
+  #content {
+    opacity: 0;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+  }
+
+  #line {
+    z-index: 10;
+    padding: 10px;
+    transition: 30ms;
+    max-width: 800px;
+    min-width: 400px;
+    background-color: #ff0000;
+    width: 200px;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #navbar {
+    position: fixed;
+    background-color: aquamarine;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+  }
+
+  .svg-turkiye-haritasi {
+    margin-top: 5%;
+    float: right;
+    margin-right: 2%;
+    width: 1140px;
+  }
+
+  .svg-turkiye-haritasi svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .il-isimleri {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .il-isimleri div {
+    font-family: 'Open Sans';
+    display: inline-block;
+    background: #658094;
+    color: #fff;
+    padding: 8px 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  #svg-turkiye-haritasi path {
+    cursor: pointer;
+    fill: #222;
+  }
+
+  #svg-turkiye-haritasi path:hover {
+    fill: #1094F6;
+  }
+}
+
+/* Mobil cihazlar için stil tanımları */
+@media only screen and (max-width: 600px) {
+
+  /* line altta olacak */
+  #line {
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    background-color: #658094;
+  }
+
+  /* navbar üstte olacak */
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Harita ekrana sığacak */
+  .svg-turkiye-haritasi {
+    max-width: 100%;
+    height: auto;
+  }
+}
